@@ -7,11 +7,7 @@
 	"map": {
 		"projection": "EPSG:31370",
 		"units": "m",
-		"center": {
-			"x": 150000,
-			"y": 170000,
-			"crs": "EPSG:31370"
-		},
+		"center": {"x": 249000, "y": 78000, "crs": "EPSG:31370"},
 		"zoom": 2,
 		"maxExtent": [
 			10000, 20000,
@@ -24,41 +20,72 @@
 			}
 		},
 		"layers": [{
-
 			"type": "wms",
-			"url": ["https://mybrugis.irisnet.be/geoserver/URBIS/wms"],
-			"title": "UrbisFR Gray",
-			"name": "URBIS:urbisFRGray",
-			"group": "background",
+			"url":["http://geoservices.wallonie.be/arcgis/services/DONNEES_BASE/FDP_LIGHT/MapServer/WMSServer"],
+		  "title": "FDP Light",
+		  "name": "0,1,2",
+			 "group": "background",
 			"visibility": true,
-			"origin": [140000.0, 160000.0],
-			"tiled": true,
-			"thumbURL": "assets/img/urbis_gray.PNG",
-			"format": "image/png8"
+			"origin" : [0,0],
+			"tiled" : true,
+			"thumbURL" : "assets/img/picc.png",
+		  "format": "image/png8"
 		}, {
-
-			"type": "wms",
-			"url": ["https://mybrugis.irisnet.be/geoserver/URBIS/wms"],
-			"title": "UrbisFR",
-			"name": "URBIS:urbisFR",
+        	"type": "wms",
+            "url":["http://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2018/MapServer/WMSServer"],
+        	"title": "Ortho",
+        	"name": "0",
+            "group": "background",
+            "thumbURL" : "",
+            "visibility": false,
+            "origin" : [0,0],
+            "tiled" : true,
+            "thumbURL" : "assets/img/orthorw.png",
+        	"format": "image/png8"
+		}, {
+			"type": "osm",
+			"title": "Open Street Map",
+			"name": "OSM",
 			"group": "background",
 			"visibility": false,
-			"format": "image/png8",
-			"origin": [140000.0, 160000.0],
-			"thumbURL": "assets/img/urbis_color.PNG",
-			"tiled": true
+			"hidden": true
+			
 		}, {
 
-			"type": "wms",
-			"url": ["https://mybrugis.irisnet.be/geoserver/ows"],
-			"title": "Aquarelle",
-			"name": "BCR:Aquarelle",
-			"group": "background",
-			"visibility": false,
-			"origin": [140000.0, 160000.0],
-			"tiled": true,
-			"thumbURL": "assets/img/aquarelle.PNG",
-			"format": "image/png8"
-		}]
+        	"type": "wms",
+            "url":["http://localhost:8080/geoserver/ores/wms"],
+        	"title": "Cabines",
+        	"name": "ores:geo_cabine",
+            "group": "ELEC MT",
+            "thumbURL" : "",
+            "visibility": false,
+            "origin" : [0,0],
+            "tiled" : true,
+        	"format": "image/png8"
+        },{
+
+        	"type": "wms",
+            "url":["http://localhost:8080/geoserver/ores/wms"],
+        	"title": "Troncons",
+        	"name": "ores:geo_troncon",
+            "group": "ELEC MT",
+            "thumbURL" : "",
+            "visibility": false,
+            "origin" : [0,0],
+            "tiled" : true,
+        	"format": "image/png8"
+        },{
+
+        	"type": "wms",
+            "url":["http://localhost:8080/geoserver/ores/wms"],
+        	"title": "ServicePoint",
+        	"name": "ores:geo_service_point",
+            "group": "CIS",
+            "thumbURL" : "",
+            "visibility": false,
+            "origin" : [0,0],
+            "tiled" : true,
+        	"format": "image/png8"
+        }]
 	}
 }
