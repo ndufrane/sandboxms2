@@ -41,55 +41,13 @@ module.exports = {
                     "isNew": true,
                     "autoload": false
                 },
-                "selectedService": "Brugis WMS Service",
+                "selectedService": "ORES POC Geoserver",
                 "services": {
-                  "Brugis WMS Service": {
-                    "url": "https://mybrugis.irisnet.be/geoserver/www/wmsaatl/wmsc_brugis_anon.xml",
+                  "ORES POC Geoserver": {
+                    "url": "http://localhost:8080/geoserver/ores/wms",
                     "type": "wms",
-                    "title": "Brugis WMS Service",
+                    "title": "ORES POC Geoserver",
                     "autoload": true
-                  },
-                  "Bruxelles Mobilité": {
-                    "url": "http://data-mobility.brussels/geoserver/bm_inspire_fr/ows",
-                    "type": "wms",
-                    "title": "Bruxelles Mobilité",
-                    "autoload": false
-                  },
-                  "Bruxelles environnement": {
-                    "url": "https://wms.environnement.brussels/be_wms",
-                    "type": "wms",
-                    "title": "Bruxelles environnement",
-                    "autoload": false
-                  },
-                  "LeefMilieu Brussel": {
-                    "url": "https://wms.environnement.brussels/lb_wms",
-                    "type": "wms",
-                    "title": "LeefMilieu Brussel",
-                    "autoload": false
-                  },
-                  'AGIV WMS - Basiskaart': {
-                    "url": "http://geoservices.informatievlaanderen.be/raadpleegdiensten/GRB-basiskaart/wms",
-                    "type": "wms",
-                    "title": "AGIV WMS - Basiskaart",
-                    "autoload": false
-                  },
-                  'Stib mivb': {
-                    "url": "http://gis.irisnet.be/geoserver/stib_mivb/wms?",
-                    "type": "wms",
-                    "title": "Stib mivb",
-                    "autoload": false
-                  },
-                  'IBSA WMS': {
-                    "url": "http://gis.irisnet.be/geoserver/ibsa_bisa/wms?",
-                    "type": "wms",
-                    "title": "IBSA WMS",
-                    "autoload": false
-                  },
-                  'CIRB WMS': {
-                    "url": "http://geoservices-urbis.irisnet.be/geoserver/ows?",
-                    "type": "wms",
-                    "title": "CIRB WMS",
-                    "autoload": false
                   }
                 }
               }
